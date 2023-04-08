@@ -1,0 +1,16 @@
+.card{
+    height: 400px;
+    margin-top: 30px;
+}
+
+.card button{
+    margin-bottom: 7px;
+}
+
+.invisible{
+    display: none;
+}
+
+.imgDoctor{
+    width: 200px;
+}

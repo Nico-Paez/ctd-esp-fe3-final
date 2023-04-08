@@ -1,0 +1,14 @@
+.datos{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+
+.p-1{
+    font-size: 20px;
+}
+
+.p-2{
+    padding: 5px;
+    margin-top: 10px;
+}
