@@ -48,20 +48,20 @@ const Card = ({ name, username, id }) => {
   }
 
   return (
-    <div className={`${theme} card`}>
+    <div className={`${theme ? 'cardOscuro' : ''} card`}>
         {/* En cada card deberan mostrar en name - username y el id */}
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
         <img className="imgDoctor" src={img} alt="doctor.jpg" />
         <div className="div-card">
         <Link to={`/dentista/${id}`} onClick={setID}>
-            <h4>{name}</h4>
+            <h4 className={`${theme ? 'nameOscuro' : ''}`}>{name}</h4>
         </Link>
         <p>{username}</p>
         </div>
         
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={() => addFav({name, username, id})} className={`favButton ${boton} ${theme}`}>Add fav</button>
-        <button onClick={() => addFav({name, username, id})} className={`favButton ${boton2} ${theme}`}>Delete fav</button>
+        <button onClick={() => addFav({name, username, id})} className={`favButton ${boton} ${theme ? 'oscuro' : ''}`}>Add fav</button>
+        <button onClick={() => addFav({name, username, id})} className={`favButton ${boton2} ${theme ? 'oscuro' : ''}`}>Delete fav</button>
     </div>
   );
 };

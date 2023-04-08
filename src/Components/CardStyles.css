@@ -14,3 +14,16 @@
 .imgDoctor{
     width: 200px;
 }
+
+.oscuro{
+    background-color: black;
+    color: white;
+}
+
+.cardOscuro{
+    background-color: #121212;
+}
+
+.nameOscuro{
+    color: white;
+}

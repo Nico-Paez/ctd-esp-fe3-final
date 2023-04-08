@@ -5,12 +5,15 @@ import Home from './Routes/Home'
 import Detail from './Routes/Detail'
 import Contact from './Routes/Contact'
 import Favs from './Routes/Favs'
-import {ContextProvider} from './Components/utils/global.context'
+import {ContextGlobal} from './Components/utils/global.context'
+import { useContext } from "react";
 
 function App() {
+
+  const {theme} = useContext(ContextGlobal)
+
   return (
-      <div className="App"> 
-          <ContextProvider>
+      <div className={`${theme} App`}> 
             <Navbar/>
               <Routes>
                 <Route path='/home' element={<Home/>}/>
@@ -19,7 +22,6 @@ function App() {
                 <Route path='/favs' element={<Favs/>}/>
               </Routes>
             <Footer/>
-          </ContextProvider>
       </div>
   );
 }
